@@ -34,7 +34,7 @@ router.get("/:id", (req, res) => {
 
 
 
-router.post('/', [check("name").not().isEmpty().trim()], (req, res) => {
+router.post('/', [check("color").not().isEmpty().trim()], (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         res.json({ error: errors.array() })
